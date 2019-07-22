@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inviértete</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <!-- CDN de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+<!-- Body -->
+<body class="custom-background-color">
+  <!-- Contenedor principal -->
+  <div class="container">
+    
+    <!-- Descripción -->
+    <div class="row">
+      <!-- Título -->
+      <div class="col-md-12 col-sm-12 cards-padding-top-and-bottom equal">
+        <!-- Título -->
+        <h4>Encuesta: Razón por la que los jóvenes asisten a Inviértete.</h4>
+        <div class="col-md-12 col-sm-12 cards-padding-top-and-bottom equal" id="tarjeta-preguntas">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-6 col-sm-12">
+                <p>1. ¿Cuál es el ingreso mensual en tu hogar? (Si desconoces de ello, escribe una cantidad aproximada)</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>2. ¿Cuál es tu dirección? (Calle, número, colonia, municipio)</p>
+                <div class="container">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>3. ¿Dónde naciste? (Municipio)</p>
+                <div class="container">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>4. ¿Cuanto dinero te dan a la semana?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>5. ¿Tienes complicaciones contribuyendo con la cuota de Inviértete (100)?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>6. ¿Cuantos amigos consideras que tienes?</p>
+                <br>
+                <div class="container">
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>7. ¿Cuántas personas viven en tu casa?</p>
+                <div class="container">
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>8. ¿Cuántos automóviles hay en tu casa?</p>
+                <div class="container">
+                  <input type="number" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>9. ¿Tienes internet en tu casa?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>10. ¿Tienes computadora propia?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>11. ¿Tienes la necesidad de trabajar?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>12. ¿Cómo conociste Inviértete?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Por mi escuela</option>
+                      <option value="2">Un amigo/compañero</option>
+                      <option value="3">Un familiar</option>
+                      <option value="4">Anuncio de Facebook</option>
+                      <option value="5">Anuncio de Twitter</option>
+                      <option value="6">Anuncio de Instagram</option>
+                      <option value="7">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>13. ¿Por qué decidiste entrar a Inviértete?</p>
+                <br>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Para mejorar mis calificaciones</option>
+                      <option value="2">Por curiosidad</option>
+                      <option value="3">Para mejorar una habilidad</option>
+                      <option value="4">Para aprender otra habilidad</option>
+                      <option value="5">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>14. ¿Qué querías aprender cuando llegaste a Inviértete?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Matemáticas</option>
+                      <option value="2">Programación</option>
+                      <option value="3">Nada en específico</option>
+                      <option value="4">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>15. ¿Cómo consideras que aprendes mejor?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">De forma individual</option>
+                      <option value="2">En el salón de clases</option>
+                      <option value="3">En equipo</option>
+                      <option value="4">Con amigos</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>16. ¿En qué area te gustaria estudiar?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Físico-matemático</option>
+                      <option value="2">Químico-biologo</option>
+                      <option value="3">Económico-administrativo</option>
+                      <option value="4">Humanidades y Ciencias Sociales</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>17. ¿Cuál era tu materia favorita antes de llegar a Inviértete?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Matemáticas</option>
+                      <option value="2">Español</option>
+                      <option value="3">Química</option>
+                      <option value="4">Biologia</option>
+                      <option value="5">Física</option>
+                      <option value="6">Artes</option>
+                      <option value="7">Deportes</option>
+                      <option value="8">Civismo</option>
+                      <option value="9">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>18. ¿Cuál es tu materia favorita ahora?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Matemáticas</option>
+                      <option value="2">Español</option>
+                      <option value="3">Química</option>
+                      <option value="4">Biologia</option>
+                      <option value="5">Física</option>
+                      <option value="6">Artes</option>
+                      <option value="7">Deportes</option>
+                      <option value="8">Civismo</option>
+                      <option value="9">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>19. ¿Practicas algún deporte?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>20. ¿Vas a Inviértete porque va alguien que te gusta?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Sí</option>
+                      <option value="0">No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <p>21. ¿Qué tan ocupado te consideras?</p>
+                <div class="container">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Selecciona</option>
+                      <option value="1">Demasiado</option>
+                      <option value="2">No muy ocupado</option>
+                      <option value="3">Para nada ocuapado</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12"></div>
+            </div>
+          </div>
+        </div>
+        <p>Dale una puntuación a la relación que mantienes con cada persona listada abajo. Deja el campo vacío si no te
+          relacionas con esa persona</p>
+      </div>
+    </div>
+    <!-- Primera fila -->
+    <div class="row">
+      <!-- Estudiantes -->
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top ivan" src="./images/students/ivan.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Iván Martínez</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/jose.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">José Esteva</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/ximena.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Ximena Pinacho</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Segunda fila -->
+    <div class="row">
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/genaro.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Genaro Melgar</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/alejandra.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Alejandra Negrete</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/megan.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Megan López</h5>
+            <p class="card-text">
+              Recién egresada del curso de programación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tercera fila -->
+    <div class="row">
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/katia.jpeg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Katia Pascual</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/daniel.png" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Daniel Pineda</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/daniel_rosales.jpg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Daniel Rosales</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cuarta fila -->
+    <div class="row">
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/luis.jpeg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Luis Rivas</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 cards-padding-top-and-bottom equal">
+        <div class="card student-card">
+          <!-- Imagen del estudiante -->
+          <img class="card-img-top" src="./images/students/carlos.jpeg" alt="Card image cap">
+          <!-- Descripción del estudiante -->
+          <div class="card-body">
+            <h5 class="card-title">Carlos Avendaño</h5>
+            <!-- Formulario -->
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Ingresa un número del 0 al 10">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Enviar formulario</button>
+  </div>
+  <br>
+</body>
+</html>

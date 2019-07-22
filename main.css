@@ -1,0 +1,95 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+}
+
+#welcome-section {
+  min-height: calc(100vh - 50px);
+  background-image: url('./images/inviertete-background-imag.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+}
+
+.padding-top {
+  margin-top: 8vh;
+}
+
+.padding-top-and-bottom {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
+.cards-padding-top-and-bottom {
+  padding-top: 4vh;
+}
+
+.dark-blue-text-color {
+  color: #183446;
+}
+
+.inviertete-text-color {
+  color: #3DB762;
+}
+
+.custom-background-color {
+  background-color: #f4f6f9;
+}
+
+.element, .typed-cursor {
+  color: white;
+  font-size: 4rem;
+}
+
+.course-card {
+  background-color: white;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  padding: 5%;
+}
+
+.student-card {
+  background-color: white;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+  border: none !important;
+}
+
+.course-card-name {
+  margin-top: 1vh;
+}
+
+.course-description {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 5%;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #183446;
+  min-height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.element {
+  font-size: 5vw;
+}
+
+.typed-cursor {
+  font-size: 5vw;
+}
+#tarjeta-preguntas{
+  background-color: white;
+  border-radius: 1vw;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+}
