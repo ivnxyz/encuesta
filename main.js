@@ -23,9 +23,14 @@ const questionGroup19 = $("#question-group-select-19");
 const questionGroup20 = $("#question-group-select-20");
 const questionGroup21 = $("#question-group-select-21");
 
+const question12OtherInput = $("#question-group-select-12-other");
+const question13OtherInput = $("#question-group-select-13-other");
+const question14OtherInput = $("#question-group-select-14-other");
+const question17OtherInput = $("#question-group-select-17-other");
+const question18OtherInput = $("#question-group-select-18-other");
+
 // Escuchar cuando el usuario da click al botón para enviar la encuesta
 $("#submit-button").click(() => {
-  console.log(questionGroup5.find(":selected").text());
   if (areFieldsComplete()) {
     // TODO: Enviar cuestionario
   } else {
@@ -35,7 +40,7 @@ $("#submit-button").click(() => {
 
 // Validar que los campos estén completos
 function areFieldsComplete() {
-  return (
+  const firstCondition =
     questionInput1.val().replace(/ /g, "") !== "" &&
     questionInput2.val().replace(/ /g, "") !== "" &&
     questionInput3.val().replace(/ /g, "") !== "" &&
@@ -47,16 +52,56 @@ function areFieldsComplete() {
     questionGroup9.find(":selected").text() !== "Selecciona" &&
     questionGroup10.find(":selected").text() !== "Selecciona" &&
     questionGroup11.find(":selected").text() !== "Selecciona" &&
-    questionGroup12.find(":selected").text() !== "Selecciona" &&
-    questionGroup13.find(":selected").text() !== "Selecciona" &&
-    questionGroup14.find(":selected").text() !== "Selecciona" &&
     questionGroup15.find(":selected").text() !== "Selecciona" &&
     questionGroup16.find(":selected").text() !== "Selecciona" &&
-    questionGroup17.find(":selected").text() !== "Selecciona" &&
-    questionGroup18.find(":selected").text() !== "Selecciona" &&
     questionGroup19.find(":selected").text() !== "Selecciona" &&
     questionGroup20.find(":selected").text() !== "Selecciona" &&
-    questionGroup21.find(":selected").text() !== "Selecciona"
+    questionGroup21.find(":selected").text() !== "Selecciona";
+
+  const secondCondition =
+    (questionGroup12.find(":selected").text() !== "Selecciona" &&
+      questionGroup12.find(":selected").text() !== "Otro") ||
+    (questionGroup12.find(":selected").text() === "Otro" &&
+      question12OtherInput.val().replace(/ /g, "") !== "");
+
+  const thirtCondition =
+    (questionGroup13.find(":selected").text() !== "Selecciona" &&
+      questionGroup13.find(":selected").text() !== "Otro") ||
+    (questionGroup13.find(":selected").text() === "Otro" &&
+      question13OtherInput.val().replace(/ /g, "") !== "");
+
+  const fourthCondition =
+    (questionGroup14.find(":selected").text() !== "Selecciona" &&
+      questionGroup14.find(":selected").text() !== "Otro") ||
+    (questionGroup14.find(":selected").text() === "Otro" &&
+      question14OtherInput.val().replace(/ /g, "") !== "");
+
+  const sixthCondition =
+    (questionGroup17.find(":selected").text() !== "Selecciona" &&
+      questionGroup17.find(":selected").text() !== "Otro") ||
+    (questionGroup17.find(":selected").text() === "Otro" &&
+      question17OtherInput.val().replace(/ /g, "") !== "");
+
+  const seventhCondition =
+    (questionGroup18.find(":selected").text() !== "Selecciona" &&
+      questionGroup18.find(":selected").text() !== "Otro") ||
+    (questionGroup18.find(":selected").text() === "Otro" &&
+      question18OtherInput.val().replace(/ /g, "") !== "");
+
+  console.log(firstCondition);
+  console.log(secondCondition);
+  console.log(thirtCondition);
+  console.log(fourthCondition);
+  console.log(sixthCondition);
+  console.log(seventhCondition);
+
+  return (
+    firstCondition &&
+    secondCondition &&
+    thirtCondition &&
+    fourthCondition &&
+    sixthCondition &&
+    seventhCondition
   );
 }
 
