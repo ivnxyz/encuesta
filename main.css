@@ -88,8 +88,13 @@
 .typed-cursor {
   font-size: 5vw;
 }
+
 #tarjeta-preguntas{
   background-color: white;
   border-radius: 1vw;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.03);
+}
+
+#submit-button {
+  width: 100%;
 }
