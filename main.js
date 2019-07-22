@@ -59,3 +59,22 @@ function areFieldsComplete() {
     questionGroup21.find(":selected").text() !== "Selecciona"
   );
 }
+
+// Configurar un simple 'validador' para asegurarse de que un input tenga un valor mayor o igual a 0
+function setSimpleValueValidator(questionInput) {
+  questionInput.keyup(() => {
+    if (parseInt(questionInput.val()) < 0) {
+      // Agregar color al input para denotar que no es un valor válido
+      questionInput.css({ border: "1px solid red" });
+    } else {
+      // Agregar color para denotar que el valor sí es válido :)
+      questionInput.css({ border: "1px solid green" });
+    }
+  });
+}
+
+setSimpleValueValidator(questionInput1);
+setSimpleValueValidator(questionInput4);
+setSimpleValueValidator(questionInput6);
+setSimpleValueValidator(questionInput7);
+setSimpleValueValidator(questionInput8);
