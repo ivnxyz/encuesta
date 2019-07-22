@@ -73,8 +73,26 @@ function setSimpleValueValidator(questionInput) {
   });
 }
 
+// Muestra el campo otro cuando el valor de cierto input es seleccionado como 'otro'
+function setSimpleFieldShower(questionInputId) {
+  $(`#${questionInputId}`).change(() => {
+    // Verificar si el campo 'otro' fue seleccionado
+    if ($(`#${questionInputId}`).val() === "other") {
+      $(`#${questionInputId}` + "-other").removeAttr("hidden");
+    } else {
+      $(`#${questionInputId}` + "-other").attr("hidden", true);
+    }
+  });
+}
+
 setSimpleValueValidator(questionInput1);
 setSimpleValueValidator(questionInput4);
 setSimpleValueValidator(questionInput6);
 setSimpleValueValidator(questionInput7);
 setSimpleValueValidator(questionInput8);
+
+setSimpleFieldShower("question-group-select-12");
+setSimpleFieldShower("question-group-select-13");
+setSimpleFieldShower("question-group-select-14");
+setSimpleFieldShower("question-group-select-17");
+setSimpleFieldShower("question-group-select-18");
