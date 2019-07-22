@@ -20,7 +20,6 @@
 <body class="custom-background-color">
   <!-- Contenedor principal -->
   <div class="container">
-    
     <!-- Descripción -->
     <div class="row">
       <!-- Título -->
@@ -37,7 +36,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">$</span>
                     </div>
-                    <input type="number" class="form-control">
+                    <input id="question-input-1" type="number" class="form-control">
                     <div class="input-group-append">
                       <span class="input-group-text">.00</span>
                     </div>
@@ -47,13 +46,13 @@
               <div class="col-md-12 col-sm-12">
                 <p>2. ¿Cuál es tu dirección? (Calle, número, colonia, municipio)</p>
                 <div class="container">
-                  <input type="text" class="form-control">
+                  <input id="question-input-2" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p>3. ¿Dónde naciste? (Municipio)</p>
                 <div class="container">
-                  <input type="text" class="form-control">
+                  <input id="question-input-3" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 col-sm-12">
@@ -63,7 +62,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">$</span>
                     </div>
-                    <input type="number" class="form-control">
+                    <input id="question-input-4" type="number" class="form-control">
                     <div class="input-group-append">
                       <span class="input-group-text">.00</span>
                     </div>
@@ -74,7 +73,7 @@
                 <p>5. ¿Tienes complicaciones contribuyendo con la cuota de Inviértete (100)?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-5" class="custom-select">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -85,26 +84,26 @@
               <div class="col-md-12 col-sm-12">
                 <p>6. ¿Cuantos amigos consideras que tienes?</p>
                 <div class="container">
-                  <input type="number" class="form-control">
+                  <input id="question-input-6" type="number" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p>7. ¿Cuántas personas viven en tu casa?</p>
                 <div class="container">
-                  <input type="number" class="form-control">
+                  <input id="question-input-7" type="number" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p>8. ¿Cuántos automóviles hay en tu casa?</p>
                 <div class="container">
-                  <input type="number" class="form-control">
+                  <input id="question-input-8" type="number" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p>9. ¿Tienes internet en tu casa?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-9" class="custom-select">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -116,7 +115,7 @@
                 <p>10. ¿Tienes computadora propia?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-10" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -128,7 +127,7 @@
                 <p>11. ¿Tienes la necesidad de trabajar?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-11" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -140,7 +139,7 @@
                 <p>12. ¿Cómo conociste Inviértete?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-12" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Por mi escuela</option>
                       <option value="2">Un amigo/compañero</option>
@@ -157,7 +156,7 @@
                 <p>13. ¿Por qué decidiste entrar a Inviértete?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-13" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Para mejorar mis calificaciones</option>
                       <option value="2">Por curiosidad</option>
@@ -172,7 +171,7 @@
                 <p>14. ¿Qué querías aprender cuando llegaste a Inviértete?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-14" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Matemáticas</option>
                       <option value="2">Programación</option>
@@ -186,7 +185,7 @@
                 <p>15. ¿Cómo consideras que aprendes mejor?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-15" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">De forma individual</option>
                       <option value="2">En el salón de clases</option>
@@ -200,7 +199,7 @@
                 <p>16. ¿En qué area te gustaria estudiar?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-16" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Físico-matemático</option>
                       <option value="2">Químico-biologo</option>
@@ -214,7 +213,7 @@
                 <p>17. ¿Cuál era tu materia favorita antes de llegar a Inviértete?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-17" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Matemáticas</option>
                       <option value="2">Español</option>
@@ -233,7 +232,7 @@
                 <p>18. ¿Cuál es tu materia favorita ahora?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-18" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Matemáticas</option>
                       <option value="2">Español</option>
@@ -252,7 +251,7 @@
                 <p>19. ¿Practicas algún deporte?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-19" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -264,7 +263,7 @@
                 <p>20. ¿Vas a Inviértete porque va alguien que te gusta?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-20" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Sí</option>
                       <option value="0">No</option>
@@ -276,7 +275,7 @@
                 <p>21. ¿Qué tan ocupado te consideras?</p>
                 <div class="container">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
+                    <select id="question-group-select-21" class="custom-select" id="inputGroupSelect02">
                       <option selected>Selecciona</option>
                       <option value="1">Demasiado</option>
                       <option value="2">No muy ocupado</option>
