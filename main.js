@@ -88,12 +88,11 @@ function areFieldsComplete() {
     (questionGroup18.find(":selected").text() === "Otro" &&
       question18OtherInput.val().replace(/ /g, "") !== "");
 
-  console.log(firstCondition);
-  console.log(secondCondition);
-  console.log(thirtCondition);
-  console.log(fourthCondition);
-  console.log(sixthCondition);
-  console.log(seventhCondition);
+  const condition8 = parseInt(questionInput1.val().replace(/ /g, "")) >= 0;
+  const condition9 = parseInt(questionInput4.val().replace(/ /g, "")) >= 0;
+  const condition10 = parseInt(questionInput6.val().replace(/ /g, "")) >= 0;
+  const condition11 = parseInt(questionInput7.val().replace(/ /g, "")) >= 0;
+  const condition12 = parseInt(questionInput8.val().replace(/ /g, "")) >= 0;
 
   return (
     firstCondition &&
@@ -101,7 +100,12 @@ function areFieldsComplete() {
     thirtCondition &&
     fourthCondition &&
     sixthCondition &&
-    seventhCondition
+    seventhCondition &&
+    condition8 &&
+    condition9 &&
+    condition10 &&
+    condition11 &&
+    condition12
   );
 }
 
