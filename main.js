@@ -34,9 +34,13 @@ $("#submit-button").click(() => {
   if (areFieldsComplete()) {
     // TODO: Enviar cuestionario
     if (checkPhotoInputs()) {
+      if (!isThereMoreThanOneMe()) {
+      } else {
+        alert("No puedes seleccionar más de una vez la opción 'soy yo'.");
+      }
     } else {
       alert(
-        "Por favor revisa que los campos en las fotografías estén rellenados correctamente"
+        "Por favor revisa que los campos en las fotografías estén rellenados correctamente."
       );
     }
   } else {
@@ -169,6 +173,22 @@ function setValidatorsForPhotoInputs() {
     const inputId = "#photo-input-" + i;
     setSimpleValueValidator($(inputId));
   }
+}
+
+function isThereMoreThanOneMe() {
+  let me = 0;
+
+  for (let i = 1; i <= 13; i++) {
+    const formId = "#photo-form-" + i;
+    const checkboxName = "photo-checkbox-" + i;
+    const checkedValue = $(`input[name=${checkboxName}]:checked`, formId).val();
+
+    if (checkedValue == "soy-yo") {
+      me += 1;
+    }
+  }
+
+  return me > 1;
 }
 
 setSimpleValueValidator(questionInput1);
