@@ -31,12 +31,19 @@ const question18OtherInput = $("#question-group-select-18-other");
 
 // Escuchar cuando el usuario da click al botón para enviar la encuesta
 $("#submit-button").click(() => {
-  checkPhotoInputs();
-  // if (areFieldsComplete()) {
-  //   // TODO: Enviar cuestionario
-  // } else {
-  //   alert("Por favor completa todos los campos antes de enviar el formulario.");
-  // }
+  if (areFieldsComplete()) {
+    // TODO: Enviar cuestionario
+    if (checkPhotoInputs()) {
+    } else {
+      alert(
+        "Por favor revisa que los campos en las fotografías estén rellenados correctamente"
+      );
+    }
+  } else {
+    alert(
+      "Por favor completa todas las preguntas correctamente antes de enviar el formulario."
+    );
+  }
 });
 
 // Validar que los campos estén completos
@@ -137,16 +144,30 @@ function setSimpleFieldShower(questionInputId) {
 
 // Se asegura de que todos los inputs de las fotos sean válidos
 function checkPhotoInputs() {
-  for (let i = 1; i <= 1; i++) {
+  for (let i = 1; i <= 13; i++) {
     const formId = "#photo-form-" + i;
     const checkboxName = "photo-checkbox-" + i;
     const inputId = "#photo-input-" + i;
 
-    const checkboxValue = $(`input[name=${checkboxName}]:checked`, formId).val();
-    const inputValue = $(inputId).val();
+    const checkedValue = $(`input[name=${checkboxName}]:checked`, formId).prop(
+      "checked"
+    );
+    const inputValue = parseInt($(inputId).val());
 
-    console.log(checkboxName, checkboxValue);
-    console.log(inputId, inputValue);
+    return (
+      (inputValue >= 0 && !checkedValue) ||
+      ($(inputId)
+        .val()
+        .replace(/ /g, "") == "" &&
+        checkedValue)
+    );
+  }
+}
+
+function setValidatorsForPhotoInputs() {
+  for (let i = 1; i <= 13; i++) {
+    const inputId = "#photo-input-" + i;
+    setSimpleValueValidator($(inputId));
   }
 }
 
@@ -161,3 +182,5 @@ setSimpleFieldShower("question-group-select-13");
 setSimpleFieldShower("question-group-select-14");
 setSimpleFieldShower("question-group-select-17");
 setSimpleFieldShower("question-group-select-18");
+
+setValidatorsForPhotoInputs();
