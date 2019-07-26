@@ -51,15 +51,11 @@ $("#submit-button").click(() => {
         const automoviles_en_casa = parseInt(
           questionInput8.val().replace(/ /g, "")
         );
-        const internet = parseInt(
-          questionGroup9.find(":selected").text() == "Sí"
-        );
-        const computadora_propia = parseInt(
-          questionGroup10.find(":selected").text() == "Sí"
-        );
-        const necesitas_trabajar = parseInt(
-          questionGroup11.find(":selected").text() == "Sí"
-        );
+        const internet = questionGroup9.find(":selected").text() == "Sí";
+        const computadora_propia =
+          questionGroup10.find(":selected").text() == "Sí";
+        const necesitas_trabajar =
+          questionGroup11.find(":selected").text() == "Sí";
         const como_conociste_inviertete =
           questionGroup12.find(":selected").text() == "Otro"
             ? $("#question-group-select-12-other").val()
@@ -118,13 +114,46 @@ $("#submit-button").click(() => {
             console.log($(`input[name=${checkboxName}]:checked`, formId).val());
 
             if (checkedValue == "soy-yo") {
-              console.log("ok");
               puntuaciones.push({ key: name, value: -1 });
             } else if (checkedValue == "no-lo-conozco") {
               puntuaciones.push({ key: name, value: -2 });
             }
           }
         }
+
+        axios
+          .post("https://inviertete-poll.herokuapp.com/", {
+            ingreso_mensual,
+            direccion,
+            lugar_nacimiento,
+            dinero_semanal,
+            complicaciones_con_la_cuota,
+            amigos,
+            personas_en_casa,
+            automoviles_en_casa,
+            internet,
+            computadora_propia,
+            necesitas_trabajar,
+            como_conociste_inviertete,
+            por_que_entraste_a_inviertete,
+            que_querias_aprender,
+            como_aprendes_mejor,
+            area_estudiar,
+            materia_favorita_antes_de_inviertate,
+            materia_favorita_ahora,
+            deporte,
+            vas_a_inviertete_por_alguien_que_te_gusta,
+            ocupado,
+            puntuaciones
+          })
+          .then(function(response) {
+            alert(response.data.message);
+          })
+          .catch(function(response) {
+            alert(
+              "Ocurrió un error al guardar tu respuesta a la encuesta, asegúrate de que contestaste todos los campos de manera correcta y de que tienes conexión a internet."
+            );
+          });
       } else {
         alert("No puedes seleccionar más de una vez la opción 'soy yo'.");
       }
