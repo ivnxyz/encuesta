@@ -103,15 +103,13 @@ $("#submit-button").click(() => {
           const inputValue = parseInt($(inputId).val());
           const name = names[i - 1];
 
-          if (inputValue) {
+          if (inputValue >= 0) {
             puntuaciones.push({ key: name, value: inputValue });
           } else {
             const checkedValue = $(
               `input[name=${checkboxName}]:checked`,
               formId
             ).val();
-
-            console.log($(`input[name=${checkboxName}]:checked`, formId).val());
 
             if (checkedValue == "soy-yo") {
               puntuaciones.push({ key: name, value: -1 });
