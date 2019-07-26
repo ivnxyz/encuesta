@@ -82,6 +82,49 @@ $("#submit-button").click(() => {
         const vas_a_inviertete_por_alguien_que_te_gusta =
           questionGroup20.find(":selected").text() == "Sí";
         const ocupado = questionGroup21.find(":selected").text();
+        const names = [
+          "ivan",
+          "jose",
+          "ximena",
+          "genaro",
+          "alejandra",
+          "megan",
+          "katia",
+          "daniel_pineda",
+          "daniel_rosales",
+          "perla",
+          "josue",
+          "sahori",
+          "miriam"
+        ];
+
+        let puntuaciones = [];
+
+        for (let i = 1; i <= 13; i++) {
+          const formId = "#photo-form-" + i;
+          const checkboxName = "photo-checkbox-" + i;
+          const inputId = "#photo-input-" + i;
+          const inputValue = parseInt($(inputId).val());
+          const name = names[i - 1];
+
+          if (inputValue) {
+            puntuaciones.push({ key: name, value: inputValue });
+          } else {
+            const checkedValue = $(
+              `input[name=${checkboxName}]:checked`,
+              formId
+            ).val();
+
+            console.log($(`input[name=${checkboxName}]:checked`, formId).val());
+
+            if (checkedValue == "soy-yo") {
+              console.log("ok");
+              puntuaciones.push({ key: name, value: -1 });
+            } else if (checkedValue == "no-lo-conozco") {
+              puntuaciones.push({ key: name, value: -2 });
+            }
+          }
+        }
       } else {
         alert("No puedes seleccionar más de una vez la opción 'soy yo'.");
       }
