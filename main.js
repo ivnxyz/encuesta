@@ -31,11 +31,12 @@ const question18OtherInput = $("#question-group-select-18-other");
 
 // Escuchar cuando el usuario da click al botón para enviar la encuesta
 $("#submit-button").click(() => {
-  if (areFieldsComplete()) {
-    // TODO: Enviar cuestionario
-  } else {
-    alert("Por favor completa todos los campos antes de enviar el formulario.");
-  }
+  checkPhotoInputs();
+  // if (areFieldsComplete()) {
+  //   // TODO: Enviar cuestionario
+  // } else {
+  //   alert("Por favor completa todos los campos antes de enviar el formulario.");
+  // }
 });
 
 // Validar que los campos estén completos
@@ -132,6 +133,21 @@ function setSimpleFieldShower(questionInputId) {
       $(`#${questionInputId}` + "-other").attr("hidden", true);
     }
   });
+}
+
+// Se asegura de que todos los inputs de las fotos sean válidos
+function checkPhotoInputs() {
+  for (let i = 1; i <= 1; i++) {
+    const formId = "#photo-form-" + i;
+    const checkboxName = "photo-checkbox-" + i;
+    const inputId = "#photo-input-" + i;
+
+    const checkboxValue = $(`input[name=${checkboxName}]:checked`, formId).val();
+    const inputValue = $(inputId).val();
+
+    console.log(checkboxName, checkboxValue);
+    console.log(inputId, inputValue);
+  }
 }
 
 setSimpleValueValidator(questionInput1);
