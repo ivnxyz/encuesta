@@ -35,6 +35,53 @@ $("#submit-button").click(() => {
     // TODO: Enviar cuestionario
     if (checkPhotoInputs()) {
       if (!isThereMoreThanOneMe()) {
+        // Obtener los datos de la encuesta
+        const ingreso_mensual = parseInt(
+          questionInput1.val().replace(/ /g, "")
+        );
+        const direccion = questionInput2.val().replace(/ /g, "");
+        const lugar_nacimiento = questionInput3.val().replace(/ /g, "");
+        const dinero_semanal = questionInput4.val().replace(/ /g, "");
+        const complicaciones_con_la_cuota =
+          questionGroup5.find(":selected").text() == "Sí";
+        const amigos = parseInt(questionInput6.val().replace(/ /g, ""));
+        const personas_en_casa = parseInt(
+          questionInput7.val().replace(/ /g, "")
+        );
+        const automoviles_en_casa = parseInt(
+          questionInput8.val().replace(/ /g, "")
+        );
+        const internet = parseInt(
+          questionGroup9.find(":selected").text() == "Sí"
+        );
+        const computadora_propia = parseInt(
+          questionGroup10.find(":selected").text() == "Sí"
+        );
+        const necesitas_trabajar = parseInt(
+          questionGroup11.find(":selected").text() == "Sí"
+        );
+        const como_conociste_inviertete =
+          questionGroup12.find(":selected").text() == "Otro"
+            ? $("#question-group-select-12-other").val()
+            : questionGroup12.find(":selected").text();
+        const por_que_entraste_a_inviertete =
+          questionGroup13.find(":selected").text() == "Otro"
+            ? $("#question-group-select-13-other").val()
+            : questionGroup13.find(":selected").text();
+        const que_querias_aprender =
+          questionGroup14.find(":selected").text() == "Otro"
+            ? $("#question-group-select-14-other").val()
+            : questionGroup13.find(":selected").text();
+        const como_aprendes_mejor = questionGroup15.find(":selected").text();
+        const area_estudiar = questionGroup16.find(":selected").text();
+        const materia_favorita_antes_de_inviertate = questionGroup17
+          .find(":selected")
+          .text();
+        const materia_favorita_ahora = questionGroup18.find(":selected").text();
+        const deporte = questionGroup19.find(":selected").text() == "Sí";
+        const vas_a_inviertete_por_alguien_que_te_gusta =
+          questionGroup20.find(":selected").text() == "Sí";
+        const ocupado = questionGroup21.find(":selected").text();
       } else {
         alert("No puedes seleccionar más de una vez la opción 'soy yo'.");
       }
