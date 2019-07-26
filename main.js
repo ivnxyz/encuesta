@@ -175,6 +175,26 @@ function setValidatorsForPhotoInputs() {
   }
 }
 
+function setValueValidatorForPhotoInputsAndCheckboxes() {
+  for (let i = 1; i <= 13; i++) {
+    const formId = "#photo-form-" + i;
+    const checkboxName = "photo-checkbox-" + i;
+    const inputId = "#photo-input-" + i;
+
+    // Remover el valor 'checked' cuando el usuario ingrese un número
+    $(inputId).keyup(() => {
+      $(`input[name=${checkboxName}]:checked`, formId).prop("checked", false);
+    });
+
+    // Remover el texto cuando el suario seleccione una opción
+    $(`input[name=${checkboxName}]`, formId).change(() => {
+      if ($(inputId).val().length != 0) {
+        $(inputId).val("");
+      }
+    });
+  }
+}
+
 function isThereMoreThanOneMe() {
   let me = 0;
 
@@ -204,3 +224,4 @@ setSimpleFieldShower("question-group-select-17");
 setSimpleFieldShower("question-group-select-18");
 
 setValidatorsForPhotoInputs();
+setValueValidatorForPhotoInputsAndCheckboxes();
