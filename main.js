@@ -67,13 +67,17 @@ $("#submit-button").click(() => {
         const que_querias_aprender =
           questionGroup14.find(":selected").text() == "Otro"
             ? $("#question-group-select-14-other").val()
-            : questionGroup13.find(":selected").text();
+            : questionGroup14.find(":selected").text();
         const como_aprendes_mejor = questionGroup15.find(":selected").text();
         const area_estudiar = questionGroup16.find(":selected").text();
-        const materia_favorita_antes_de_inviertate = questionGroup17
-          .find(":selected")
-          .text();
-        const materia_favorita_ahora = questionGroup18.find(":selected").text();
+        const materia_favorita_antes_de_inviertate =
+          questionGroup17.find(":selected").text() == "Otro"
+            ? $("#question-group-select-17-other").val()
+            : questionGroup17.find(":selected").text();
+        const materia_favorita_ahora =
+          questionGroup18.find(":selected").text() == "Otro"
+            ? $("#question-group-select-18-other").val()
+            : questionGroup18.find(":selected").text();
         const deporte = questionGroup19.find(":selected").text() == "Sí";
         const vas_a_inviertete_por_alguien_que_te_gusta =
           questionGroup20.find(":selected").text() == "Sí";
